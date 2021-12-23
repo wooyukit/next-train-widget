@@ -27,6 +27,7 @@
 		2C6A01FC276F8DFA005BB9D2 /* NextTrainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A01F7276F8DF9005BB9D2 /* NextTrainWidget.intentdefinition */; };
 		2C6A01FF276F8DFA005BB9D2 /* NextTrainWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2C6A01EE276F8DF9005BB9D2 /* NextTrainWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2C9D3EE027738E4800C8D34B /* StationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D3EDF27738E4800C8D34B /* StationMapper.swift */; };
+		2CF4B50A2774CE1C00E00468 /* StationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D3EDF27738E4800C8D34B /* StationMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,6 +294,7 @@
 				2C6A01FB276F8DFA005BB9D2 /* NextTrainWidget.intentdefinition in Sources */,
 				2C4D298E2773769700094950 /* ApiService.swift in Sources */,
 				2C6A01F6276F8DF9005BB9D2 /* NextTrainWidget.swift in Sources */,
+				2CF4B50A2774CE1C00E00468 /* StationMapper.swift in Sources */,
 				2C4D29912773774400094950 /* Departure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

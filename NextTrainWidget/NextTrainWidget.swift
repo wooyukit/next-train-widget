@@ -11,40 +11,56 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), configuration: ConfigurationIntent(), departureData: nil)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
+        Task {
+            let departureData = try await ApiService.shared.getDepartData(.LHP)
+            let entry = SimpleEntry(date: Date(), configuration: ConfigurationIntent(), departureData: departureData)
+            completion(entry)
+        }
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+        Task {
+            do {
+                let departureData = try await ApiService.shared.getDepartData(.LHP)
+                let entry = SimpleEntry(date: Date(), configuration: ConfigurationIntent(), departureData: departureData)
+                let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 60)))
+                completion(timeline)
+            } catch {
+                print(error)
+            }
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
+    let departureData: DepartureData?
 }
 
 struct NextTrainWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack {
+            Text("LHP".station).font(.system(size: 16))
+            Divider()
+            HStack {
+                ForEach((0..<(min(entry.departureData?.down?.count ?? 0, 3))), id: \.self) {
+                    if let departure = entry.departureData?.down?[$0] {
+                        VStack(spacing: 8) {
+                            Text("\(departure.ttnt)分鐘").font(.caption)
+                            Divider()
+                            Text(departure.time.timeString).font(.caption)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -63,7 +79,7 @@ struct NextTrainWidget: Widget {
 
 struct NextTrainWidget_Previews: PreviewProvider {
     static var previews: some View {
-        NextTrainWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        NextTrainWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(), departureData: nil))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

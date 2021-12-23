@@ -10,4 +10,5 @@ import Foundation
 struct Departure: Codable {
     let ttnt: String
     let dest: String
+    let time: String
 }

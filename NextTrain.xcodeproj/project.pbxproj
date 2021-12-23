@@ -13,6 +13,8 @@
 		2C4D298E2773769700094950 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298C2773769700094950 /* ApiService.swift */; };
 		2C4D29902773774400094950 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298F2773774400094950 /* Departure.swift */; };
 		2C4D29912773774400094950 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298F2773774400094950 /* Departure.swift */; };
+		2C56AFD22774A9640049C55D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56AFD12774A9640049C55D /* DateExtension.swift */; };
+		2C56AFD32774A9640049C55D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56AFD12774A9640049C55D /* DateExtension.swift */; };
 		2C6A01DD276F8D4C005BB9D2 /* NextTrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A01DC276F8D4C005BB9D2 /* NextTrainApp.swift */; };
 		2C6A01DF276F8D4C005BB9D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A01DE276F8D4C005BB9D2 /* ContentView.swift */; };
 		2C6A01E1276F8D4D005BB9D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A01E0276F8D4D005BB9D2 /* Assets.xcassets */; };
@@ -55,6 +57,7 @@
 		2C4D29892773768500094950 /* DepartureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureData.swift; sourceTree = "<group>"; };
 		2C4D298C2773769700094950 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2C4D298F2773774400094950 /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
+		2C56AFD12774A9640049C55D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		2C6A01D9276F8D4C005BB9D2 /* NextTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6A01DC276F8D4C005BB9D2 /* NextTrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTrainApp.swift; sourceTree = "<group>"; };
 		2C6A01DE276F8D4C005BB9D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9D3EDF27738E4800C8D34B /* StationMapper.swift */,
+				2C56AFD12774A9640049C55D /* DateExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -270,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9D3EE027738E4800C8D34B /* StationMapper.swift in Sources */,
+				2C56AFD22774A9640049C55D /* DateExtension.swift in Sources */,
 				2C4D29902773774400094950 /* Departure.swift in Sources */,
 				2C6A01DF276F8D4C005BB9D2 /* ContentView.swift in Sources */,
 				2C4D298D2773769700094950 /* ApiService.swift in Sources */,
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4D298B2773768500094950 /* DepartureData.swift in Sources */,
+				2C56AFD32774A9640049C55D /* DateExtension.swift in Sources */,
 				2C6A01FB276F8DFA005BB9D2 /* NextTrainWidget.intentdefinition in Sources */,
 				2C4D298E2773769700094950 /* ApiService.swift in Sources */,
 				2C6A01F6276F8DF9005BB9D2 /* NextTrainWidget.swift in Sources */,
@@ -424,9 +430,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NextTrain/Preview Content\"";
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -441,6 +449,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,9 +462,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NextTrain/Preview Content\"";
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,6 +481,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -481,8 +493,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NextTrainWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NextTrainWidget;
@@ -495,6 +509,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.NextTrainWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -507,8 +522,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NextTrainWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NextTrainWidget;
@@ -521,6 +538,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.NextTrainWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

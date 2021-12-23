@@ -18,34 +18,42 @@ struct ContentView: View {
                 Section(header: Text("LHP".station)) {
                     ForEach((0..<(departureDataLHP?.down?.count ?? 0)), id: \.self) {
                         if let departure = departureDataLHP?.down?[$0] {
-                            Text("往 \(departure.dest.station) - \(departure.ttnt)分鐘")
+                            HStack {
+                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
+                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                            }
                         }
                     }
                 }
                 Section(header: Text("NOP".station)) {
                     ForEach((0..<(departureDataNOP?.up?.count ?? 0)), id: \.self) {
                         if let departure = departureDataNOP?.up?[$0] {
-                            Text("往 \(departure.dest.station) - \(departure.ttnt)分鐘")
+                            HStack {
+                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
+                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                            }
                         }
                     }
                 }
                 Section(header: Text("TIK".station)) {
                     ForEach((0..<(departureDataTIK?.up?.count ?? 0)), id: \.self) {
                         if let departure = departureDataTIK?.up?[$0] {
-                            Text("往 \(departure.dest.station) - \(departure.ttnt)分鐘")
+                            HStack {
+                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
+                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                            }
                         }
                     }
                 }
                 .navigationTitle("Next Train Widget")
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing, content: {
-                    Button("Reload") {
-                        Task {
-                            await getData()
-                        }
-                    }
-                })
+            .refreshable {
+                Task {
+                    await getData()
+                }
             }
         }
         .task {
@@ -55,9 +63,9 @@ struct ContentView: View {
     
     private func getData() async {
         do {
-            departureDataLHP = try await ApiService.shared.getLHPDepartData()
-            departureDataNOP = try await ApiService.shared.getNOPDepartData()
-            departureDataTIK = try await ApiService.shared.getTIKDepartData()
+            departureDataLHP = try await ApiService.shared.getDepartData(.LHP)
+            departureDataNOP = try await ApiService.shared.getDepartData(.NOP)
+            departureDataTIK = try await ApiService.shared.getDepartData(.TIK)
         } catch {
             print(error)
         }

@@ -46,16 +46,23 @@ struct NextTrainWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        VStack {
-            Text("LHP".station).font(.system(size: 16))
-            Divider()
-            HStack {
-                ForEach((0..<(min(entry.departureData?.down?.count ?? 0, 3))), id: \.self) {
-                    if let departure = entry.departureData?.down?[$0] {
-                        VStack(spacing: 8) {
-                            Text("\(departure.ttnt)分鐘").font(.caption)
-                            Divider()
-                            Text(departure.time.timeString).font(.caption)
+        if entry.departureData == nil {
+            ProgressView()
+        } else {
+            VStack {
+                Text("LHP".station).font(.system(size: 16))
+                Divider()
+                HStack {
+                    ForEach((0..<(min(entry.departureData?.down?.count ?? 0, 3))), id: \.self) {
+                        if let departure = entry.departureData?.down?[$0] {
+                            VStack(spacing: 8) {
+                                Text(departure.dest.station).font(.caption)
+                                Divider()
+                                Text("\(departure.ttnt)分鐘").font(.caption)
+                                Divider()
+                                Text(departure.time.timeString).font(.caption)
+                                Divider()
+                            }
                         }
                     }
                 }
@@ -74,6 +81,7 @@ struct NextTrainWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 

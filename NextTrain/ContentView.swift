@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     @State var departureDataLHP: DepartureData? = nil
@@ -69,6 +70,8 @@ struct ContentView: View {
         } catch {
             print(error)
         }
+        // reload widget data as well
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

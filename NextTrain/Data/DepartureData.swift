@@ -11,11 +11,13 @@ import SwiftUI
 struct DepartureData: Codable {
     let currentTime: String
     let systemTime: String
-    let departures: [Departure]?
+    let down: [Departure]?
+    let up: [Departure]?
     
     enum CodingKeys: String, CodingKey {
         case currentTime = "curr_time"
         case systemTime = "sys_time"
-        case departures = "DOWN"
+        case down = "DOWN"
+        case up = "UP"
     }
 }

@@ -49,17 +49,16 @@ struct ContentView: View {
                         }
                     }
                 }
-                .navigationTitle("Next Train Widget")
+                .navigationTitle("Next Train")
             }
             .refreshable {
-                Task {
-                    await getData()
-                }
+                Task { await getData() }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                Task { await getData() }
             }
         }
-        .task {
-            await getData()
-        }
+        .task { await getData() }
     }
     
     private func getData() async {

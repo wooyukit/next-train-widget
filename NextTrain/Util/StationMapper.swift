@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    var station: String {
+    var stationName: String {
         switch (self) {
         case "TIK":
             return "調景嶺"
@@ -16,6 +16,8 @@ extension String {
             return "北角"
         case "POA":
             return "寶林"
+        case "TKO":
+            return "將軍澳"
         default:
             return "康城"
         }

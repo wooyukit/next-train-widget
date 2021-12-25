@@ -9,42 +9,24 @@ import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
-    @State var departureDataLHP: DepartureData? = nil
-    @State var departureDataNOP: DepartureData? = nil
-    @State var departureDataTIK: DepartureData? = nil
+    @State var departureDatas: [ApiService.Station: DepartureData?] = [:]
     
     var body: some View {
-        NavigationView {
+        let keys = departureDatas.map { $0.key }.sorted(by: <)
+        return NavigationView {
             List {
-                Section(header: Text("LHP".station)) {
-                    ForEach((0..<(departureDataLHP?.down?.count ?? 0)), id: \.self) {
-                        if let departure = departureDataLHP?.down?[$0] {
-                            HStack {
-                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
-                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
-                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
-                            }
-                        }
-                    }
-                }
-                Section(header: Text("NOP".station)) {
-                    ForEach((0..<(departureDataNOP?.up?.count ?? 0)), id: \.self) {
-                        if let departure = departureDataNOP?.up?[$0] {
-                            HStack {
-                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
-                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
-                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
-                            }
-                        }
-                    }
-                }
-                Section(header: Text("TIK".station)) {
-                    ForEach((0..<(departureDataTIK?.up?.count ?? 0)), id: \.self) {
-                        if let departure = departureDataTIK?.up?[$0] {
-                            HStack {
-                                Text("往 \(departure.dest.station)").frame(maxWidth: .infinity, alignment: .leading)
-                                Text("\(departure.ttnt)分鐘").frame(maxWidth: .infinity, alignment: .center)
-                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                ForEach(keys.indices, id: \.self) { index in
+                    let station = keys[index]
+                    let value = departureDatas[station] ?? nil
+                    Section(header: Text(station.stationName)) {
+                        let departures = station == ApiService.Station.LHP ? value?.down : value?.up
+                        ForEach((0..<(departures?.count ?? 0)), id: \.self) {
+                            if let departure = departures?[$0] {
+                                HStack {
+                                    Text("往 \(departure.dest.stationName)").frame(maxWidth: .infinity, alignment: .leading)
+                                    Text("\(departure.ttnt) 分鐘").frame(maxWidth: .infinity, alignment: .center)
+                                    Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                                }
                             }
                         }
                     }
@@ -63,9 +45,10 @@ struct ContentView: View {
     
     private func getData() async {
         do {
-            departureDataLHP = try await ApiService.shared.getDepartData(.LHP)
-            departureDataNOP = try await ApiService.shared.getDepartData(.NOP)
-            departureDataTIK = try await ApiService.shared.getDepartData(.TIK)
+            departureDatas[.LHP] = try await ApiService.shared.getDepartData(.LHP)
+            departureDatas[.NOP] = try await ApiService.shared.getDepartData(.NOP)
+            departureDatas[.TIK] = try await ApiService.shared.getDepartData(.TIK)
+            departureDatas[.TKO] = try await ApiService.shared.getDepartData(.TKO)
         } catch {
             print(error)
         }

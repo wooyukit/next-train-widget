@@ -50,13 +50,13 @@ struct NextTrainWidgetEntryView : View {
             ProgressView()
         } else {
             VStack {
-                Text("LHP".station).font(.system(size: 18))
+                Text("LHP".stationName).font(.system(size: 18))
                 Divider()
                 HStack {
                     ForEach((0..<(min(entry.departureData?.down?.count ?? 0, 3))), id: \.self) {
                         if let departure = entry.departureData?.down?[$0] {
                             VStack(spacing: 8) {
-                                Text(departure.dest.station).font(.caption)
+                                Text(departure.dest.stationName).font(.caption)
                                 Divider()
                                 Text("\(departure.ttnt) 分鐘").font(.caption)
                                 Divider()

@@ -34,7 +34,7 @@ struct ContentView: View {
                 .navigationTitle("Next Train")
             }
             .refreshable {
-                Task { await getData() }
+                await getData()
             }
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
                 Task { await getData() }

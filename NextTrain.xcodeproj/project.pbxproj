@@ -13,6 +13,11 @@
 		2C4D298E2773769700094950 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298C2773769700094950 /* ApiService.swift */; };
 		2C4D29902773774400094950 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298F2773774400094950 /* Departure.swift */; };
 		2C4D29912773774400094950 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298F2773774400094950 /* Departure.swift */; };
+		2C4E62862778521300D8E104 /* StationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D3EDF27738E4800C8D34B /* StationMapper.swift */; };
+		2C4E62872778522100D8E104 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56AFD12774A9640049C55D /* DateExtension.swift */; };
+		2C4E62882778529400D8E104 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298C2773769700094950 /* ApiService.swift */; };
+		2C4E62892778529700D8E104 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298F2773774400094950 /* Departure.swift */; };
+		2C4E628A2778529D00D8E104 /* DepartureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D29892773768500094950 /* DepartureData.swift */; };
 		2C56AFD22774A9640049C55D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56AFD12774A9640049C55D /* DateExtension.swift */; };
 		2C56AFD32774A9640049C55D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56AFD12774A9640049C55D /* DateExtension.swift */; };
 		2C6A01DD276F8D4C005BB9D2 /* NextTrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A01DC276F8D4C005BB9D2 /* NextTrainApp.swift */; };
@@ -27,6 +32,16 @@
 		2C6A01FC276F8DFA005BB9D2 /* NextTrainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A01F7276F8DF9005BB9D2 /* NextTrainWidget.intentdefinition */; };
 		2C6A01FF276F8DFA005BB9D2 /* NextTrainWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2C6A01EE276F8DF9005BB9D2 /* NextTrainWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2C9D3EE027738E4800C8D34B /* StationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D3EDF27738E4800C8D34B /* StationMapper.swift */; };
+		2CF129D82777FAF300A31AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF129D72777FAF300A31AE1 /* Assets.xcassets */; };
+		2CF129DE2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2CF129DD2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2CF129E32777FAF300A31AE1 /* NextTrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF129E22777FAF300A31AE1 /* NextTrainApp.swift */; };
+		2CF129E52777FAF300A31AE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF129E42777FAF300A31AE1 /* ContentView.swift */; };
+		2CF129E72777FAF300A31AE1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF129E62777FAF300A31AE1 /* NotificationController.swift */; };
+		2CF129E92777FAF300A31AE1 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF129E82777FAF300A31AE1 /* NotificationView.swift */; };
+		2CF129EB2777FAF300A31AE1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF129EA2777FAF300A31AE1 /* ComplicationController.swift */; };
+		2CF129ED2777FAF300A31AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF129EC2777FAF300A31AE1 /* Assets.xcassets */; };
+		2CF129F02777FAF300A31AE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF129EF2777FAF300A31AE1 /* Preview Assets.xcassets */; };
+		2CF129F52777FAF300A31AE1 /* NextTrainWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2CF129D52777FAF200A31AE1 /* NextTrainWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CF4B50A2774CE1C00E00468 /* StationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D3EDF27738E4800C8D34B /* StationMapper.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +53,20 @@
 			remoteGlobalIDString = 2C6A01ED276F8DF9005BB9D2;
 			remoteInfo = NextTrainWidgetExtension;
 		};
+		2CF129DF2777FAF300A31AE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C6A01D1276F8D4C005BB9D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CF129DC2777FAF300A31AE1;
+			remoteInfo = "NextTrainWatch WatchKit Extension";
+		};
+		2CF129F32777FAF300A31AE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C6A01D1276F8D4C005BB9D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CF129D42777FAF200A31AE1;
+			remoteInfo = NextTrainWatch;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +77,28 @@
 			dstSubfolderSpec = 13;
 			files = (
 				2C6A01FF276F8DFA005BB9D2 /* NextTrainWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF129F62777FAF300A31AE1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2CF129F52777FAF300A31AE1 /* NextTrainWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF129F92777FAF300A31AE1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2CF129DE2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +123,18 @@
 		2C6A01F8276F8DFA005BB9D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6A01FA276F8DFA005BB9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9D3EDF27738E4800C8D34B /* StationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapper.swift; sourceTree = "<group>"; };
+		2CF129D52777FAF200A31AE1 /* NextTrainWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextTrainWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF129D72777FAF300A31AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CF129DD2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NextTrainWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF129E22777FAF300A31AE1 /* NextTrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTrainApp.swift; sourceTree = "<group>"; };
+		2CF129E42777FAF300A31AE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CF129E62777FAF300A31AE1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2CF129E82777FAF300A31AE1 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2CF129EA2777FAF300A31AE1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2CF129EC2777FAF300A31AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CF129EF2777FAF300A31AE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CF129F12777FAF300A31AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF129F22777FAF300A31AE1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +151,13 @@
 			files = (
 				2C6A01F3276F8DF9005BB9D2 /* SwiftUI.framework in Frameworks */,
 				2C6A01F1276F8DF9005BB9D2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF129DA2777FAF300A31AE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +179,8 @@
 			children = (
 				2C6A01DB276F8D4C005BB9D2 /* NextTrain */,
 				2C6A01F4276F8DF9005BB9D2 /* NextTrainWidget */,
+				2CF129D62777FAF200A31AE1 /* NextTrainWatch */,
+				2CF129E12777FAF300A31AE1 /* NextTrainWatch WatchKit Extension */,
 				2C6A01EF276F8DF9005BB9D2 /* Frameworks */,
 				2C6A01DA276F8D4C005BB9D2 /* Products */,
 			);
@@ -119,6 +191,8 @@
 			children = (
 				2C6A01D9276F8D4C005BB9D2 /* NextTrain.app */,
 				2C6A01EE276F8DF9005BB9D2 /* NextTrainWidgetExtension.appex */,
+				2CF129D52777FAF200A31AE1 /* NextTrainWatch.app */,
+				2CF129DD2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +247,38 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		2CF129D62777FAF200A31AE1 /* NextTrainWatch */ = {
+			isa = PBXGroup;
+			children = (
+				2CF129D72777FAF300A31AE1 /* Assets.xcassets */,
+			);
+			path = NextTrainWatch;
+			sourceTree = "<group>";
+		};
+		2CF129E12777FAF300A31AE1 /* NextTrainWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2CF129E22777FAF300A31AE1 /* NextTrainApp.swift */,
+				2CF129E42777FAF300A31AE1 /* ContentView.swift */,
+				2CF129E62777FAF300A31AE1 /* NotificationController.swift */,
+				2CF129E82777FAF300A31AE1 /* NotificationView.swift */,
+				2CF129EA2777FAF300A31AE1 /* ComplicationController.swift */,
+				2CF129EC2777FAF300A31AE1 /* Assets.xcassets */,
+				2CF129F12777FAF300A31AE1 /* Info.plist */,
+				2CF129F22777FAF300A31AE1 /* PushNotificationPayload.apns */,
+				2CF129EE2777FAF300A31AE1 /* Preview Content */,
+			);
+			path = "NextTrainWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2CF129EE2777FAF300A31AE1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2CF129EF2777FAF300A31AE1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,11 +290,13 @@
 				2C6A01D6276F8D4C005BB9D2 /* Frameworks */,
 				2C6A01D7276F8D4C005BB9D2 /* Resources */,
 				2C6A0200276F8DFA005BB9D2 /* Embed App Extensions */,
+				2CF129F62777FAF300A31AE1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2C6A01FE276F8DFA005BB9D2 /* PBXTargetDependency */,
+				2CF129F42777FAF300A31AE1 /* PBXTargetDependency */,
 			);
 			name = NextTrain;
 			productName = NextTrain;
@@ -212,6 +320,40 @@
 			productReference = 2C6A01EE276F8DF9005BB9D2 /* NextTrainWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		2CF129D42777FAF200A31AE1 /* NextTrainWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF129FD2777FAF300A31AE1 /* Build configuration list for PBXNativeTarget "NextTrainWatch" */;
+			buildPhases = (
+				2CF129D32777FAF200A31AE1 /* Resources */,
+				2CF129F92777FAF300A31AE1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF129E02777FAF300A31AE1 /* PBXTargetDependency */,
+			);
+			name = NextTrainWatch;
+			productName = NextTrainWatch;
+			productReference = 2CF129D52777FAF200A31AE1 /* NextTrainWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2CF129DC2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF129FC2777FAF300A31AE1 /* Build configuration list for PBXNativeTarget "NextTrainWatch WatchKit Extension" */;
+			buildPhases = (
+				2CF129D92777FAF300A31AE1 /* Sources */,
+				2CF129DA2777FAF300A31AE1 /* Frameworks */,
+				2CF129DB2777FAF300A31AE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NextTrainWatch WatchKit Extension";
+			productName = "NextTrainWatch WatchKit Extension";
+			productReference = 2CF129DD2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,6 +368,12 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					2C6A01ED276F8DF9005BB9D2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2CF129D42777FAF200A31AE1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2CF129DC2777FAF300A31AE1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -245,6 +393,8 @@
 			targets = (
 				2C6A01D8276F8D4C005BB9D2 /* NextTrain */,
 				2C6A01ED276F8DF9005BB9D2 /* NextTrainWidgetExtension */,
+				2CF129D42777FAF200A31AE1 /* NextTrainWatch */,
+				2CF129DC2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +414,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6A01F9276F8DFA005BB9D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF129D32777FAF200A31AE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF129D82777FAF300A31AE1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF129DB2777FAF300A31AE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF129F02777FAF300A31AE1 /* Preview Assets.xcassets in Resources */,
+				2CF129ED2777FAF300A31AE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +466,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CF129D92777FAF300A31AE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF129E72777FAF300A31AE1 /* NotificationController.swift in Sources */,
+				2C4E62872778522100D8E104 /* DateExtension.swift in Sources */,
+				2C4E62862778521300D8E104 /* StationMapper.swift in Sources */,
+				2CF129E52777FAF300A31AE1 /* ContentView.swift in Sources */,
+				2C4E628A2778529D00D8E104 /* DepartureData.swift in Sources */,
+				2CF129EB2777FAF300A31AE1 /* ComplicationController.swift in Sources */,
+				2CF129E32777FAF300A31AE1 /* NextTrainApp.swift in Sources */,
+				2C4E62892778529700D8E104 /* Departure.swift in Sources */,
+				2C4E62882778529400D8E104 /* ApiService.swift in Sources */,
+				2CF129E92777FAF300A31AE1 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -306,6 +490,16 @@
 			isa = PBXTargetDependency;
 			target = 2C6A01ED276F8DF9005BB9D2 /* NextTrainWidgetExtension */;
 			targetProxy = 2C6A01FD276F8DFA005BB9D2 /* PBXContainerItemProxy */;
+		};
+		2CF129E02777FAF300A31AE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CF129DC2777FAF300A31AE1 /* NextTrainWatch WatchKit Extension */;
+			targetProxy = 2CF129DF2777FAF300A31AE1 /* PBXContainerItemProxy */;
+		};
+		2CF129F42777FAF300A31AE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CF129D42777FAF200A31AE1 /* NextTrainWatch */;
+			targetProxy = 2CF129F32777FAF300A31AE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,6 +742,120 @@
 			};
 			name = Release;
 		};
+		2CF129F72777FAF300A31AE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = NextTrainWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = NextTrainWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kit.NextTrain;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		2CF129F82777FAF300A31AE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = NextTrainWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = NextTrainWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kit.NextTrain;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		2CF129FA2777FAF300A31AE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NextTrainWatch WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NextTrainWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NextTrainWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		2CF129FB2777FAF300A31AE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NextTrainWatch WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NextTrainWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NextTrainWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +882,24 @@
 			buildConfigurations = (
 				2C6A0201276F8DFA005BB9D2 /* Debug */,
 				2C6A0202276F8DFA005BB9D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF129FC2777FAF300A31AE1 /* Build configuration list for PBXNativeTarget "NextTrainWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF129FA2777FAF300A31AE1 /* Debug */,
+				2CF129FB2777FAF300A31AE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF129FD2777FAF300A31AE1 /* Build configuration list for PBXNativeTarget "NextTrainWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF129F72777FAF300A31AE1 /* Debug */,
+				2CF129F82777FAF300A31AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

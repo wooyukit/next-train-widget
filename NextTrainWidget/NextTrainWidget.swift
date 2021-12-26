@@ -50,7 +50,7 @@ struct NextTrainWidgetEntryView : View {
             ProgressView()
         } else {
             VStack {
-                Text(ApiService.Station.LHP.stationName).font(.system(size: 18))
+                Text(Station.LHP.stationName).font(.system(size: 18))
                 Divider()
                 HStack {
                     ForEach((0..<(min(entry.departureData?.down?.count ?? 0, 3))), id: \.self) {

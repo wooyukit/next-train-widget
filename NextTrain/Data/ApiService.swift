@@ -9,28 +9,6 @@ import Foundation
 
 final class ApiService {
     static let shared = ApiService()
-    enum Station: String, Comparable {
-        
-        case LHP, NOP, TIK, TKO
-        var apiKey: String { get { "TKL-\(self.rawValue)" } }
-        var stationName: String { get { self.rawValue.stationName } }
-        
-        private var sortOrder: Int {
-            switch self {
-            case .LHP:
-                return 0
-            case .NOP:
-                return 1
-            case .TIK:
-                return 2
-            case .TKO:
-                return 3
-            }
-        }
-        static func < (lhs: ApiService.Station, rhs: ApiService.Station) -> Bool {
-            return lhs.sortOrder < rhs.sortOrder
-        }
-    }
     
     let apiString = "https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line=TKL&sta=%@"
     

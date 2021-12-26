@@ -14,7 +14,7 @@ extension String {
         
         if let date = dateFormatterGet.date(from: self) {
             let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "HH : mm"
+            dateFormatterPrint.dateFormat = "h:mm"
             return dateFormatterPrint.string(from: date)
         } else {
             return ""

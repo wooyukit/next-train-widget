@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
-    @State var departureDatas: [ApiService.Station: DepartureData?] = [:]
+    @State var departureDatas: [Station: DepartureData?] = [:]
     
     var body: some View {
         let keys = departureDatas.map { $0.key }.sorted(by: <)
@@ -19,7 +19,7 @@ struct ContentView: View {
                     let station = keys[index]
                     let value = departureDatas[station] ?? nil
                     Section(header: Text(station.stationName)) {
-                        let departures = station == ApiService.Station.LHP ? value?.down : value?.up
+                        let departures = station == Station.LHP ? value?.down : value?.up
                         ForEach((0..<(departures?.count ?? 0)), id: \.self) {
                             if let departure = departures?[$0] {
                                 HStack {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08262E2778A47600027720 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08262D2778A47600027720 /* Station.swift */; };
+		2C08262F2778A4B700027720 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08262D2778A47600027720 /* Station.swift */; };
+		2C0826302778A4B700027720 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08262D2778A47600027720 /* Station.swift */; };
 		2C4D298A2773768500094950 /* DepartureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D29892773768500094950 /* DepartureData.swift */; };
 		2C4D298B2773768500094950 /* DepartureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D29892773768500094950 /* DepartureData.swift */; };
 		2C4D298D2773769700094950 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D298C2773769700094950 /* ApiService.swift */; };
@@ -106,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C08262D2778A47600027720 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		2C4D29892773768500094950 /* DepartureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureData.swift; sourceTree = "<group>"; };
 		2C4D298C2773769700094950 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2C4D298F2773774400094950 /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				2C4D29892773768500094950 /* DepartureData.swift */,
 				2C4D298F2773774400094950 /* Departure.swift */,
 				2C4D298C2773769700094950 /* ApiService.swift */,
+				2C08262D2778A47600027720 /* Station.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9D3EE027738E4800C8D34B /* StationMapper.swift in Sources */,
+				2C08262E2778A47600027720 /* Station.swift in Sources */,
 				2C56AFD22774A9640049C55D /* DateExtension.swift in Sources */,
 				2C4D29902773774400094950 /* Departure.swift in Sources */,
 				2C6A01DF276F8D4C005BB9D2 /* ContentView.swift in Sources */,
@@ -458,6 +464,7 @@
 			files = (
 				2C4D298B2773768500094950 /* DepartureData.swift in Sources */,
 				2C56AFD32774A9640049C55D /* DateExtension.swift in Sources */,
+				2C08262F2778A4B700027720 /* Station.swift in Sources */,
 				2C6A01FB276F8DFA005BB9D2 /* NextTrainWidget.intentdefinition in Sources */,
 				2C4D298E2773769700094950 /* ApiService.swift in Sources */,
 				2C6A01F6276F8DF9005BB9D2 /* NextTrainWidget.swift in Sources */,
@@ -478,6 +485,7 @@
 				2CF129EB2777FAF300A31AE1 /* ComplicationController.swift in Sources */,
 				2CF129E32777FAF300A31AE1 /* NextTrainApp.swift in Sources */,
 				2C4E62892778529700D8E104 /* Departure.swift in Sources */,
+				2C0826302778A4B700027720 /* Station.swift in Sources */,
 				2C4E62882778529400D8E104 /* ApiService.swift in Sources */,
 				2CF129E92777FAF300A31AE1 /* NotificationView.swift in Sources */,
 			);
@@ -749,7 +757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -760,6 +768,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -776,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -787,6 +796,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -800,9 +810,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NextTrainWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NextTrainWatch WatchKit Extension/Info.plist";
@@ -817,6 +829,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -830,9 +843,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NextTrainWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = UBCWQYXJ47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NextTrainWatch WatchKit Extension/Info.plist";
@@ -847,6 +862,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kit.NextTrain.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "SCMP dev wildcard";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

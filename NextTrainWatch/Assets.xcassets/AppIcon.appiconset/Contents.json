@@ -102,6 +102,7 @@
       "subtype" : "45mm"
     },
     {
+      "filename" : "logo_appstore.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

@@ -11,11 +11,10 @@ import SwiftUI
 struct NextTrainApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
-            }
+            ContentView()
+                .edgesIgnoringSafeArea(.all)
         }
-
+        
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

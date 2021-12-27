@@ -9,35 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     @State var departureDatas: [Station: DepartureData?] = [:]
-    @State var visibleStations: Set<Station> = []
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         let keys = departureDatas.map { $0.key }.sorted(by: <)
-        let visibleStation = visibleStations.sorted(by: <).first
-        return List {
-            ForEach(keys.indices, id: \.self) { index in
-                let station = keys[index]
-                let value = departureDatas[station] ?? nil
-                Section(header: Text(station.stationName)) {
-                    let departures = station == Station.LHP ? value?.down : value?.up
-                    ForEach((0..<(departures?.count ?? 0)), id: \.self) {
-                        if let departure = departures?[$0] {
-                            HStack {
-                                Text("往 \(departure.dest.stationName)").frame(maxWidth: .infinity, alignment: .leading)
-                                Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+        return ScrollView {
+            LazyVStack(pinnedViews: [.sectionHeaders]) {
+                ForEach(keys.indices, id: \.self) { index in
+                    let station = keys[index]
+                    let value = departureDatas[station] ?? nil
+                    Section(header: VStack(alignment: .leading) {
+                        Text(station.stationName).padding(EdgeInsets(top: 8, leading: 10, bottom: 0, trailing: 0))
+                        Divider() }.background(.black)
+                    ) {
+                        let departures = station == Station.LHP ? value?.down : value?.up
+                        ForEach((0..<(departures?.count ?? 0)), id: \.self) {
+                            if let departure = departures?[$0] {
+                                Button(action: {}) {
+                                    HStack {
+                                        Text("往 \(departure.dest.stationName)").frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(departure.time.timeString).frame(maxWidth: .infinity, alignment: .trailing)
+                                    }
+                                }
                             }
                         }
                     }
                 }
-                .onAppear {
-                    visibleStations.insert(station)
-                }
-                .onDisappear {
-                    visibleStations.remove(station)
-                }
             }
-            .navigationTitle(visibleStation?.stationName ?? "")
         }
         .onChange(of: scenePhase) { phase in
             switch phase {

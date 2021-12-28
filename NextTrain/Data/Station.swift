@@ -10,8 +10,17 @@ import Foundation
 enum Station: String, Comparable {
     
     case LHP, NOP, TIK, TKO
-    var apiKey: String { get { "TKL-\(self.rawValue)" } }
+  
+    var apiKey: String { get { "\(self.line)-\(self.rawValue)" } }
+  
     var stationName: String { get { self.rawValue.stationName } }
+  
+    var line: String {
+        switch self {
+        case .LHP, .NOP, .TIK, .TKO:
+            return "TKL"
+        }
+    }
     
     private var sortOrder: Int {
         switch self {
@@ -25,6 +34,7 @@ enum Station: String, Comparable {
             return 3
         }
     }
+  
     static func < (lhs: Station, rhs: Station) -> Bool {
         return lhs.sortOrder < rhs.sortOrder
     }

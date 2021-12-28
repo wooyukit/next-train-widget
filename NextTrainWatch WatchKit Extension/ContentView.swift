@@ -18,10 +18,10 @@ struct ContentView: View {
                 ForEach(keys.indices, id: \.self) { index in
                     let station = keys[index]
                     let value = departureDatas[station] ?? nil
-                    Section(header: VStack(alignment: .leading) {
-                        Text(station.stationName).padding(EdgeInsets(top: 8, leading: 10, bottom: 0, trailing: 0))
-                        Divider() }.background(.black)
-                    ) {
+                    Section(header: Text(station.stationName)
+                                .padding(EdgeInsets(top: 6, leading: 10, bottom: 0, trailing: 0))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.black)) {
                         let departures = station == Station.LHP ? value?.down : value?.up
                         ForEach((0..<(departures?.count ?? 0)), id: \.self) {
                             if let departure = departures?[$0] {

@@ -4,6 +4,8 @@
 
 ![Widget](https://github.com/wooyukit/next-train-widget/raw/develop/Readme/widget.png)
 
+![Watch](https://github.com/wooyukit/next-train-widget/raw/develop/Readme/watch.png)
+
 MTR Next Train iOS Widget for easier to track the departure time.
 
 Using `SwiftUI` and `Aysnc Await` pattern for the development.
